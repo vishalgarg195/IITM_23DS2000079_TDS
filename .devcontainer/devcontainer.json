@@ -1,9 +1,7 @@
 {
   "name": "ga2-7a7512",
-  "image": "mcr.microsoft.com/devcontainers/python:3.13",
-  "features": {
-    "ghcr.io/devcontainers/features/python:1": {}
-  },
+  "image": "ghcr.io/devcontainers/features/python:1",
+  "features": {},
   "extensions": [
     "astral-sh.uv",
     "ms-python.python"

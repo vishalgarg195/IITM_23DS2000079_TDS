@@ -16,8 +16,8 @@ jobs:
 
       # Step 2: Prime dependency cache
       - name: Prime cache
+        id: prime-cache-ef5e34e   # <-- this is required to reference outputs
         uses: actions/cache@v4
-        id: prime-cache-ef5e34e
         with:
           path: |
             ~/.cache/pip
@@ -25,5 +25,5 @@ jobs:
           key: cache-ef5e34e
 
       # Step 3: Echo cache hit/miss
-      - name: Prime cache result
+      - name: Show cache result
         run: echo "Cache hit? ${{ steps.prime-cache-ef5e34e.outputs.cache-hit }}"

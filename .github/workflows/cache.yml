@@ -10,20 +10,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout repo
+      # Step 1: Checkout the repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      
-      - name: prime-cache-ef5e34e        
-        id: prime_cache                  
+      # Step 2: Prime the cache
+      - name: prime-cache-ef5e34e    
+        id: prime_cache              
         uses: actions/cache@v4
         with:
           path: |
             ~/.cache/pip
             node_modules
-          key: cache-ef5e34e
+          key: cache-ef5e34e        
 
-      
+      # Step 3: Echo cache hit/miss
       - name: Show cache result
         run: echo "Cache hit? ${{ steps.prime_cache.outputs.cache-hit }}"
